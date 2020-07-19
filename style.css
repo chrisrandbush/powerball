@@ -1,0 +1,33 @@
+#pball {
+    margin: 1em;
+  }
+  #pball div {
+    display: inline-block;
+    height: 4em;
+    width: 4em;
+    text-align: center;
+    border-radius: 5em;
+    background: #ddd;
+    line-height: 4em;
+    margin-right: 1em;
+  }
+  #pball div:last-child {
+    color: white;
+    background: #800;
+    margin-right: 0;
+  }
+  #pball input {
+    display: inline-block;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    width: 100%;
+    padding: 0;
+    outline: 0;
+  }
+  
+  body {
+    background: #123;
+    text-align: center;
+  }
+  

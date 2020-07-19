@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Powerball Generator</title>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div id="pball"></div>
+        <button class="btn">Generate PowerBall number</button>
+
+    <script type="text/javascript">
+  
+       
+        $('button').click(function() {
+        balls = [];
+        for (i=1;i<=69;i++){
+         balls.push(i);
+        }
+        $('#pball').html('');
+        for(i=0;i<5;i++){
+         r=Math.floor(Math.random()*balls.length);
+         $('#pball').append('<div><input value="'+balls[r]+'" maxlength=2/></div>');
+            balls.slice(r,1);
+        }
+        $('#pball').append('<div><input value="'+Math.ceil(Math.random()*26)+'" maxlength=2/></div>');
+        });
+
+        $('button').click();
+
+    </script>
+
+    
+</body>
+</html>
